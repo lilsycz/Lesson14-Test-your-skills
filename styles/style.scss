@@ -9,6 +9,11 @@ $color-gray: #999999;
 $color-blue: #5b5bd6;
 $color-blue-dark: #3333cb;
 
+// Smooth scroll
+html {
+  scroll-behavior: smooth;
+}
+
 // Base
 html, body {
   overflow-x: hidden;
@@ -25,6 +30,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   h1 {
     font-family: $font-josefin;
@@ -44,12 +50,26 @@ html, body {
     margin-top: 10px;
   }
 
+  // Fix 2: Scroll Down positioned at bottom with icon
   .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: $font-josefin;
     font-size: 13px;
     letter-spacing: 2px;
     color: $color-white;
-    margin-top: 30px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -68,6 +88,7 @@ html, body {
     border: none;
     outline: none;
     width: 400px;
+    text-align: center; // Fix 2: center placeholder text
   }
 
   button {
@@ -215,28 +236,31 @@ nav {
   .card-text {
     background-color: rgba(0, 0, 0, 0.55);
     padding: 50px 40px;
-    width: 45%;
+    width: 40%;
 
-    p:first-child {
+    // Fix 4: Spain label - small
+    .card-location {
       font-family: $font-josefin;
-      font-size: 20px;
-      letter-spacing: 1.5px;
+      font-size: 14px;
+      letter-spacing: 1px;
       color: $color-light;
-      line-height: 26px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
+    // Fix 4: GRAND SPAIN MADRID - larger, bold
     h2 {
       font-family: $font-josefin;
-      font-size: 20px;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 1px;
       color: $color-white;
-      line-height: 26px;
       margin-bottom: 20px;
     }
 
-    p:not(:first-child) {
+    // Fix 4: Description text
+    .card-desc {
       font-family: $font-josefin;
-      font-size: 16px;
+      font-size: 14px;
       color: $color-light;
       line-height: 26px;
       margin-bottom: 30px;
@@ -249,7 +273,7 @@ nav {
       color: $color-white;
       background-color: $color-blue;
       border: none;
-      padding: 20px 50px;
+      padding: 15px 40px;
       cursor: pointer;
 
       &:hover,
@@ -277,32 +301,38 @@ nav {
     margin-bottom: 60px;
   }
 
+  // Fix 5: limit width and center the content
   .testimonial-content {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
 
     img {
-      width: 445px;
-      height: 284px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
+      flex-shrink: 0;
     }
 
+    // Fix 5: wrap text in a visible box
     .testimonial-text {
       flex: 1;
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 30px;
 
       h3 {
         font-family: $font-josefin;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 1.5px;
         color: $color-white;
-        line-height: 26px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       p {
         font-family: $font-josefin;
-        font-size: 16px;
+        font-size: 14px;
         color: $color-light;
         line-height: 26px;
 
@@ -312,7 +342,7 @@ nav {
           font-size: 36px;
           color: $color-blue;
           vertical-align: middle;
-          margin-right: 10px;
+          margin-right: 8px;
         }
       }
     }

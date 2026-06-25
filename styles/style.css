@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   overflow-x: hidden;
   background-color: #3a3a3a;
@@ -13,6 +17,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .hero h1 {
   font-family: "Josefin Sans", sans-serif;
@@ -31,11 +36,22 @@ html, body {
   margin-top: 10px;
 }
 .hero .scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Josefin Sans", sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
   color: #ffffff;
-  margin-top: 30px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.hero .scroll-down:hover, .hero .scroll-down:focus {
+  opacity: 0.7;
 }
 
 .search-bar {
@@ -52,6 +68,7 @@ html, body {
   border: none;
   outline: none;
   width: 400px;
+  text-align: center;
 }
 .search-bar button {
   font-family: "Aleo", serif;
@@ -177,26 +194,26 @@ nav ul a:hover, nav ul a:focus {
 .travel-card .card-text {
   background-color: rgba(0, 0, 0, 0.55);
   padding: 50px 40px;
-  width: 45%;
+  width: 40%;
 }
-.travel-card .card-text p:first-child {
+.travel-card .card-text .card-location {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  letter-spacing: 1.5px;
+  font-size: 14px;
+  letter-spacing: 1px;
   color: #e8e8e8;
-  line-height: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .travel-card .card-text h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
   color: #ffffff;
-  line-height: 26px;
   margin-bottom: 20px;
 }
-.travel-card .card-text p:not(:first-child) {
+.travel-card .card-text .card-desc {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #e8e8e8;
   line-height: 26px;
   margin-bottom: 30px;
@@ -208,7 +225,7 @@ nav ul a:hover, nav ul a:focus {
   color: #ffffff;
   background-color: #5b5bd6;
   border: none;
-  padding: 20px 50px;
+  padding: 15px 40px;
   cursor: pointer;
 }
 .travel-card .card-text button:hover, .travel-card .card-text button:focus {
@@ -233,28 +250,32 @@ nav ul a:hover, nav ul a:focus {
 .testimonial .testimonial-content {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .testimonial .testimonial-content img {
-  width: 445px;
-  height: 284px;
+  width: 300px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  flex-shrink: 0;
 }
 .testimonial .testimonial-content .testimonial-text {
   flex: 1;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 30px;
 }
 .testimonial .testimonial-content .testimonial-text h3 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1.5px;
   color: #ffffff;
-  line-height: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .testimonial .testimonial-content .testimonial-text p {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #e8e8e8;
   line-height: 26px;
 }
@@ -264,7 +285,7 @@ nav ul a:hover, nav ul a:focus {
   font-size: 36px;
   color: #5b5bd6;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 footer {
