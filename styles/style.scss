@@ -9,15 +9,32 @@ $color-gray: #999999;
 $color-blue: #5474fd;
 $color-blue-dark: #2f52db;
 
-// Smooth scroll
+// Base
 html {
   scroll-behavior: smooth;
-}
-
-// Base
-html, body {
   overflow-x: hidden;
   background-color: #333333;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// Cross-browser resets
+input,
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input::placeholder {
+  color: $color-gray;
+  opacity: 1;
 }
 
 // Hero
@@ -57,7 +74,6 @@ html, body {
     margin-top: 10px;
   }
 
-  // Fix 2: Scroll Down positioned at bottom with icon
   .scroll-down {
     position: absolute;
     bottom: 180px;
@@ -93,7 +109,7 @@ html, body {
     border: none;
     outline: none;
     width: 400px;
-    text-align: center; // Fix 2: center placeholder text
+    text-align: center;
   }
 
   button {
@@ -111,6 +127,14 @@ html, body {
       background-color: $color-blue-dark;
     }
   }
+}
+
+.search-error {
+  font-family: $font-josefin;
+  font-size: 12px;
+  color: #ff4444;
+  margin-top: 8px;
+  display: none;
 }
 
 // Nav
@@ -249,7 +273,6 @@ nav {
     padding: 70px 35px;
     width: 35%;
 
-    // Fix 4: Spain label - small
     .card-location {
       font-family: $font-josefin;
       font-size: 14px;
@@ -258,7 +281,6 @@ nav {
       margin-bottom: 10px;
     }
 
-    // Fix 4: GRAND SPAIN MADRID - larger, bold
     h2 {
       font-family: $font-josefin;
       font-weight: 700;
@@ -268,7 +290,6 @@ nav {
       margin-bottom: 20px;
     }
 
-    // Fix 4: Description text
     .card-desc {
       font-family: $font-josefin;
       font-size: 14px;
@@ -315,7 +336,6 @@ nav {
     margin-bottom: 60px;
   }
 
-  // Fix 5: limit width and center the content
   .testimonial-content {
     display: flex;
     align-items: stretch;
@@ -330,7 +350,6 @@ nav {
       flex-shrink: 0;
     }
 
-    // Fix 5: wrap text in a visible box
     .testimonial-text {
       flex: 1;
       background-color: #333333;
@@ -359,6 +378,148 @@ nav {
           margin-right: 8px;
         }
       }
+    }
+  }
+}
+
+// Responsive: tablet
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 520px;
+    padding: 60px 20px;
+
+    .hero-center {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 34px;
+      letter-spacing: 3px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+
+    .scroll-down {
+      bottom: 30px;
+    }
+  }
+
+  .search-bar {
+    flex-direction: column;
+    width: 100%;
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+
+  .why-us {
+    flex-direction: column;
+    padding: 40px 20px;
+
+    .why-us-images {
+      margin-top: 40px;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 100%;
+        max-width: 320px;
+        height: 200px;
+      }
+
+      img:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .travel-card {
+    height: auto;
+    min-height: 450px;
+
+    &.travel-card-left {
+      padding-left: 20px;
+      padding-right: 20px;
+      justify-content: center;
+    }
+
+    &.travel-card-right {
+      padding-left: 20px;
+      padding-right: 20px;
+      justify-content: center;
+    }
+
+    .card-text {
+      width: 85%;
+      padding: 40px 25px;
+    }
+  }
+
+  .testimonial {
+    padding: 50px 20px;
+    min-height: 0;
+
+    .testimonial-content {
+      flex-direction: column;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+}
+
+// Responsive: mobile
+@media (max-width: 480px) {
+  .hero {
+    h1 {
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+
+    .scroll-down {
+      bottom: 20px;
+    }
+  }
+
+  nav ul {
+    gap: 10px;
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  .travel-card {
+    .card-text {
+      width: 90%;
+      padding: 30px 20px;
     }
   }
 }

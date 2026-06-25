@@ -16,10 +16,11 @@
       <div class="hero-center">
         <h1>BHROMAON</h1>
         <p class="hero-subtitle">Safe Travel Anywhere</p>
-        <div class="search-bar">
-          <input type="text" placeholder="Search Your Travel Destination" />
-          <button type="button">SEARCH <i class="fas fa-search"></i></button>
-        </div>
+        <form class="search-bar" id="search-form" novalidate>
+          <input type="text" id="search-input" placeholder="Search Your Travel Destination" />
+          <button type="submit">SEARCH <i class="fas fa-search"></i></button>
+        </form>
+        <p class="search-error" id="search-error">Please enter a destination.</p>
       </div>
       <a href="#nav" class="scroll-down">
         Scroll Down
@@ -99,6 +100,27 @@
         <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
       </ul>
     </footer>
+
+    <script>
+      var form = document.getElementById('search-form');
+      var input = document.getElementById('search-input');
+      var error = document.getElementById('search-error');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value.trim() === '') {
+          error.style.display = 'block';
+        } else {
+          error.style.display = 'none';
+        }
+      });
+
+      input.addEventListener('input', function () {
+        if (input.value.trim() !== '') {
+          error.style.display = 'none';
+        }
+      });
+    </script>
 
   </body>
 </html>
