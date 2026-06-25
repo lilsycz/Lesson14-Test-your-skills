@@ -5,7 +5,7 @@ html {
 
 html, body {
   overflow-x: hidden;
-  background-color: #3a3a3a;
+  background-color: #333333;
 }
 
 .hero {
@@ -18,6 +18,12 @@ html, body {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.hero .hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 .hero h1 {
   font-family: "Josefin Sans", sans-serif;
@@ -37,9 +43,7 @@ html, body {
 }
 .hero .scroll-down {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 180px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
@@ -75,21 +79,21 @@ html, body {
   font-size: 14px;
   letter-spacing: 1.4px;
   color: #ffffff;
-  background-color: #5b5bd6;
+  background-color: #5474fd;
   border: none;
   padding: 15px 30px;
   cursor: pointer;
 }
 .search-bar button:hover, .search-bar button:focus {
-  background-color: #3333cb;
+  background-color: #2f52db;
 }
 
 nav {
-  background-color: #5b5bd6;
+  background-color: #5474fd;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 20px 15%;
 }
 nav p {
   font-family: "Josefin Sans", sans-serif;
@@ -116,11 +120,11 @@ nav ul a:hover, nav ul a:focus {
   background-image: url("../media/2.bg.png");
   background-size: cover;
   background-position: center;
-  background-color: #3a3a3a;
+  background-color: #333333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
+  padding: 60px 15%;
 }
 .why-us .why-us-text {
   flex: 1;
@@ -146,13 +150,13 @@ nav ul a:hover, nav ul a:focus {
   font-size: 16px;
   letter-spacing: 1.2px;
   color: #ffffff;
-  background-color: #5b5bd6;
+  background-color: #5474fd;
   border: none;
   padding: 20px 50px;
   cursor: pointer;
 }
 .why-us .why-us-text button:hover, .why-us .why-us-text button:focus {
-  background-color: #3333cb;
+  background-color: #2f52db;
 }
 .why-us .why-us-images {
   flex: 1;
@@ -166,6 +170,9 @@ nav ul a:hover, nav ul a:focus {
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.why-us .why-us-images img:first-child {
+  margin-right: 88px;
 }
 
 .icons-img {
@@ -184,17 +191,19 @@ nav ul a:hover, nav ul a:focus {
   background-size: cover;
   background-position: center;
   justify-content: flex-start;
+  padding-left: 15%;
 }
 .travel-card.travel-card-right {
   background-image: url("../media/4.bg.png");
   background-size: cover;
   background-position: center;
   justify-content: flex-end;
+  padding-right: 15%;
 }
 .travel-card .card-text {
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 50px 40px;
-  width: 40%;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 70px 35px;
+  width: 35%;
 }
 .travel-card .card-text .card-location {
   font-family: "Josefin Sans", sans-serif;
@@ -223,13 +232,13 @@ nav ul a:hover, nav ul a:focus {
   font-size: 16px;
   letter-spacing: 1.2px;
   color: #ffffff;
-  background-color: #5b5bd6;
+  background-color: #5474fd;
   border: none;
   padding: 15px 40px;
   cursor: pointer;
 }
 .travel-card .card-text button:hover, .travel-card .card-text button:focus {
-  background-color: #3333cb;
+  background-color: #2f52db;
 }
 
 .testimonial {
@@ -237,7 +246,10 @@ nav ul a:hover, nav ul a:focus {
   background-size: cover;
   background-position: center;
   min-height: 731px;
-  padding: 80px 60px;
+  padding: 80px 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .testimonial h2 {
   font-family: "Aleo", serif;
@@ -249,21 +261,21 @@ nav ul a:hover, nav ul a:focus {
 }
 .testimonial .testimonial-content {
   display: flex;
-  align-items: center;
-  gap: 40px;
+  align-items: stretch;
+  gap: 0;
   max-width: 900px;
   margin: 0 auto;
 }
 .testimonial .testimonial-content img {
   width: 300px;
-  height: 300px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   flex-shrink: 0;
 }
 .testimonial .testimonial-content .testimonial-text {
   flex: 1;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: #333333;
   padding: 30px;
 }
 .testimonial .testimonial-content .testimonial-text h3 {
@@ -283,13 +295,13 @@ nav ul a:hover, nav ul a:focus {
   content: '"';
   font-family: "Aleo", serif;
   font-size: 36px;
-  color: #5b5bd6;
+  color: #5474fd;
   vertical-align: middle;
   margin-right: 8px;
 }
 
 footer {
-  background-color: #3a3a3a;
+  background-color: #333333;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
@@ -320,5 +332,5 @@ footer .footer-social a {
   font-size: 16px;
 }
 footer .footer-social a:hover, footer .footer-social a:focus {
-  color: #5b5bd6;
+  color: #5474fd;
 }/*# sourceMappingURL=style.css.map */

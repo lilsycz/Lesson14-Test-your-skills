@@ -6,8 +6,8 @@ $font-aleo: 'Aleo', serif;
 $color-white: #ffffff;
 $color-light: #e8e8e8;
 $color-gray: #999999;
-$color-blue: #5b5bd6;
-$color-blue-dark: #3333cb;
+$color-blue: #5474fd;
+$color-blue-dark: #2f52db;
 
 // Smooth scroll
 html {
@@ -17,7 +17,7 @@ html {
 // Base
 html, body {
   overflow-x: hidden;
-  background-color: #3a3a3a;
+  background-color: #333333;
 }
 
 // Hero
@@ -31,6 +31,13 @@ html, body {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
 
   h1 {
     font-family: $font-josefin;
@@ -53,9 +60,7 @@ html, body {
   // Fix 2: Scroll Down positioned at bottom with icon
   .scroll-down {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 180px;
     font-family: $font-josefin;
     font-size: 13px;
     letter-spacing: 2px;
@@ -114,7 +119,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 20px 15%;
 
   p {
     font-family: $font-josefin;
@@ -147,11 +152,11 @@ nav {
   background-image: url('../media/2.bg.png');
   background-size: cover;
   background-position: center;
-  background-color: #3a3a3a;
+  background-color: #333333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
+  padding: 60px 15%;
 
   .why-us-text {
     flex: 1;
@@ -203,6 +208,10 @@ nav {
       height: 220px;
       object-fit: cover;
     }
+
+    img:first-child {
+      margin-right: 88px;
+    }
   }
 }
 
@@ -224,6 +233,7 @@ nav {
     background-size: cover;
     background-position: center;
     justify-content: flex-start;
+    padding-left: 15%;
   }
 
   &.travel-card-right {
@@ -231,12 +241,13 @@ nav {
     background-size: cover;
     background-position: center;
     justify-content: flex-end;
+    padding-right: 15%;
   }
 
   .card-text {
-    background-color: rgba(0, 0, 0, 0.55);
-    padding: 50px 40px;
-    width: 40%;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 70px 35px;
+    width: 35%;
 
     // Fix 4: Spain label - small
     .card-location {
@@ -290,7 +301,10 @@ nav {
   background-size: cover;
   background-position: center;
   min-height: 731px;
-  padding: 80px 60px;
+  padding: 80px 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h2 {
     font-family: $font-aleo;
@@ -304,14 +318,14 @@ nav {
   // Fix 5: limit width and center the content
   .testimonial-content {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: stretch;
+    gap: 0;
     max-width: 900px;
     margin: 0 auto;
 
     img {
       width: 300px;
-      height: 300px;
+      height: auto;
       object-fit: cover;
       flex-shrink: 0;
     }
@@ -319,7 +333,7 @@ nav {
     // Fix 5: wrap text in a visible box
     .testimonial-text {
       flex: 1;
-      background-color: rgba(0, 0, 0, 0.45);
+      background-color: #333333;
       padding: 30px;
 
       h3 {
@@ -351,7 +365,7 @@ nav {
 
 // Footer
 footer {
-  background-color: #3a3a3a;
+  background-color: #333333;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
