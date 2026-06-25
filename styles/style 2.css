@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap');
 
-// Variables
 $font-josefin: 'Josefin Sans', sans-serif;
 $font-aleo: 'Aleo', serif;
 $color-white: #ffffff;
@@ -9,7 +8,6 @@ $color-gray: #999999;
 $color-blue: #5474fd;
 $color-blue-dark: #2f52db;
 
-// Base
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -239,7 +237,6 @@ nav {
   }
 }
 
-// Icons strip
 .icons-img {
   width: 100%;
   max-width: 100%;
@@ -316,7 +313,6 @@ nav {
   }
 }
 
-// Testimonial
 .testimonial {
   background-image: url('../media/5.bg.png');
   background-size: cover;
@@ -382,31 +378,12 @@ nav {
   }
 }
 
-// Responsive: tablet
+// Responsive
 @media (max-width: 768px) {
   .hero {
     height: auto;
     min-height: 520px;
     padding: 60px 20px;
-
-    .hero-center {
-      width: 100%;
-      margin-bottom: 60px;
-    }
-
-    h1 {
-      font-size: 34px;
-      letter-spacing: 3px;
-    }
-
-    .hero-subtitle {
-      font-size: 16px;
-      letter-spacing: 4px;
-    }
-
-    .scroll-down {
-      bottom: 30px;
-    }
   }
 
   .search-bar {
@@ -427,7 +404,6 @@ nav {
     ul {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
     }
   }
 
@@ -438,12 +414,10 @@ nav {
     .why-us-images {
       margin-top: 40px;
       align-items: center;
-      width: 100%;
 
       img {
         width: 100%;
         max-width: 320px;
-        height: 200px;
       }
 
       img:first-child {
@@ -453,34 +427,22 @@ nav {
   }
 
   .travel-card {
-    height: auto;
-    min-height: 450px;
-
-    &.travel-card-left {
-      padding-left: 20px;
-      padding-right: 20px;
-      justify-content: center;
-    }
-
+    &.travel-card-left,
     &.travel-card-right {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 40px 20px;
       justify-content: center;
     }
 
     .card-text {
       width: 85%;
-      padding: 40px 25px;
     }
   }
 
   .testimonial {
     padding: 50px 20px;
-    min-height: 0;
 
     .testimonial-content {
       flex-direction: column;
-      max-width: 100%;
 
       img {
         width: 100%;
@@ -490,41 +452,6 @@ nav {
   }
 }
 
-// Responsive: mobile
-@media (max-width: 480px) {
-  .hero {
-    h1 {
-      font-size: 26px;
-      letter-spacing: 2px;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      letter-spacing: 3px;
-    }
-
-    .scroll-down {
-      bottom: 20px;
-    }
-  }
-
-  nav ul {
-    gap: 10px;
-
-    a {
-      font-size: 12px;
-    }
-  }
-
-  .travel-card {
-    .card-text {
-      width: 90%;
-      padding: 30px 20px;
-    }
-  }
-}
-
-// Footer
 footer {
   background-color: #333333;
   padding: 50px 20px;
